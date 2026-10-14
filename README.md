@@ -29,11 +29,18 @@ Copy `themes/bastide.yaml` to the `themes` folder of your configuration, then re
 
 The theme uses [Barlow and Barlow Condensed](https://fonts.google.com/specimen/Barlow) (SIL Open Font License). Bastide Cards load them from Google Fonts when the theme is active. Without Bastide Cards, Home Assistant falls back to Roboto.
 
-Loading fonts from Google sends a request to Google's servers. To avoid it, add this line to the theme:
+Loading fonts from Google sends a request to Google's servers. To avoid it, add this line to the theme, next to the other variables:
 
 ```yaml
-bastide-fonts: none
+Bastide:
+  modes:
+    dark:
+      bastide-fonts: none
 ```
+
+## Dark only
+
+The theme only has a dark mode. Selecting it switches Home Assistant to its dark colours, so dialogs, text boxes and dropdowns stay readable.
 
 ## Colours
 
